@@ -1,0 +1,308 @@
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+.ultimate-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+#hero{
+ height: 300px;
+ position: relative;
+}
+
+/* #hero::after{
+    content: '';
+    position: absolute;
+    background-image: url(./images/landscape-ice-mountains-background-ai-generated-photo.jpg);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+
+#hero .img{
+width: 100%;
+height: 100%;
+}
+
+
+.hero-img {
+    width: 100%;
+    height: 200px;
+ }
+
+ .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    transform: translate(-50%);
+    left: 50%;
+ }
+
+ h1{
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 5px 1px 13px rgba(0,0,0,0.6);
+    font-weight: 400
+ }
+ .icon1 {
+    width: 27px;
+    display: none;
+ }
+ .icon2 {
+    width: 42px;
+    display: none;
+ }
+ .icon3{
+    width: 55px;
+    display: none;
+ }
+ .icon4{
+    width: 30px;
+    display: none;
+ }
+
+ .todo-card{
+     width: 35%;
+    }
+    
+    .top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    height: 40px;
+ }
+h3{
+    font-weight: 400;
+    color: rgb(94, 231, 255);
+    z-index: 1;
+}
+.setting{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #fff;
+    z-index: 1;
+    height: 30px;
+    align-items: center;
+    
+}
+.set-icon{
+    cursor: pointer;
+}
+.clear{
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    overflow: hidden;
+    overflow-y: auto;
+
+}
+
+.toggle{
+    display: flex;
+    height: 25px;
+}
+.clear button{
+    height: 23px;
+    width: 70px;
+    cursor: pointer;
+}
+.form{
+    width: 100%;
+    z-index: 1;
+    transition: all 1s;
+    animation-delay: 2s;
+}
+
+.form input{
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+}
+
+
+
+#btn{
+    
+    background-color: rgb(94, 231, 255);
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    height: 35px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    transition: all .5s;
+}
+#btn:hover{
+    background-color: #f3f3f3;
+    color: rgb(94, 231, 255);
+    border: 1px solid rgb(94, 231, 255);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 300px;
+    text-align: left;
+    margin-top: 10px;
+    transition: 1s;
+}
+.left-list{
+    background-color: transparent;
+    color: #fff;
+    text-align: left;
+    width: 350px;
+    /* box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 1px 11px 0px rgba(0,0,0,0.75); */
+
+}
+.ul{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.button{
+    background-color: transparent;
+    color: rgb(43, 43, 43);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 300;
+    border: 1px solid rgb(177, 177, 177);
+
+}
+.delete-btn{
+    color: red;
+}
+
+.right-list span{
+    text-decoration-line: line-through;
+}
+
+p{
+    color: #000;
+    width: 350px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 13px;
+}
+i{
+    width: 28;
+    height: 28px;
+    font-size: 28px;
+    color: rgb(0, 255, 136);;
+}
+.icon-div{
+    display: flex;
+}
+
+
+.active{
+    background-color: aqua;
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    border-top: .5px solid transparent;
+    border-left: .5px solid rgb(231, 231, 231);
+    border-right: .5px solid rgb(231, 231, 231);
+    border-bottom: .5px solid rgb(231, 231, 231);
+}
+
+.right-list{
+    background-color: transparent;
+    color: #fff;
+    width: 350px;
+    margin-top: -20px;
+}
+
+
+.remove{
+    display: none;
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+   100%{
+        transform: translateY(-5px);
+        opacity: 0;
+    }
+}
+@keyframes slideBottom{
+    0%{
+       transform: translateY(0);
+       opacity: 0;
+    }
+    100%{
+        transform: translateY(2px);
+        opacity: 1;
+    }
+}
+
+@keyframes close{
+    0%{
+       transform: translateY(0);
+       z-index: 0;
+    }
+    100%{
+        transform: translateY(-35px);
+        opacity: 0;
+    }
+}
+
+@keyframes open{
+    0%{
+       transform: translateY(0);
+       z-index: 0;
+    }
+    100%{
+        transform: translateY(35px);
+        opacity: 0;
+    }
+}
+
+
+
+
+
+

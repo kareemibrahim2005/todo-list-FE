@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="ultimate-wrapper">
+        <section id="hero">
+          <img
+            class="img"
+            src="./images/landscape-ice-mountains-background-ai-generated-photo.jpg"
+            alt=""
+          />
+          <div class="wrapper" id="wrapper">
+            <div class="top" id="top">
+              <h1>TODO LIST</h1>
+              <img
+                class="icon1"
+                id="icon1"
+                src="images/2712425-200-removebg-preview.png"
+                alt=""
+              />
+              <img
+                class="icon2"
+                id="icon2"
+                src="images/images-removebg-preview(2).png"
+                alt=""
+              />
+              <img
+                class="icon3"
+                id="icon3"
+                src="images/plus1-removebg-preview.png"
+                alt=""
+                srcset=""
+              />
+              <img
+                class="icon4"
+                id="icon4"
+                src="images/minus-removebg-preview.png"
+                alt=""
+                srcset=""
+              />
+            </div>
+            <form class="form" id="form">
+              <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Enter your title"
+                required
+              />
+              <input
+                type=""
+                name="title"
+                id="discription"
+                placeholder="Enter your discription"
+                required
+              />
+              <button id="btn" type="submit">submit</button>
+            </form>
+          </div>
+        </section>
+        <section class="container" id="container">
+          <div class="list">
+            <h3>Ongoing Task</h3>
+            <div class="left-list">
+              <!-- <div class="ul">
+                <button class="button" id="button">boy</button>
+                <div class="details">
+                  <p id="p">ghtdmf</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+          <div>
+            <div class="setting">
+              <h3>Completed Task</h3>
+              <box-icon
+                class="set-icon"
+                type="solid"
+                name="cog"
+                color="blue"
+                onclick="deleteAll()"
+              ></box-icon>
+            </div>
+            <div class="clear">
+              <button onclick="deleteAllTask()">Clear tasks</button>
+            </div>
+            <div class="right-list" id="right-list">
+              <!-- <div class="ul" id="ul">
+                <button class="button" id="span">boy</button>
+                <div class="details">
+                  <p id="p">ghtdmf</p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="test.js"></script>
+  </body>
+</html>
