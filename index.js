@@ -97,22 +97,20 @@ form.addEventListener("animationend", () => {
 async function postData(e) {
   e.preventDefault();
   console.log(todoList);
-  await fetch("http://localhost:5000/api/books/", {
+  await fetch("https://todo-lists-2ckh.onrender.com/api/books/", {
     method: "POST",
     body: JSON.stringify(todoList),
     headers: {
       "Content-type": "application/json",
     },
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data));
+  }).then((res) => res.json());
 
   location.reload();
 }
 
 form.addEventListener("submit", postData);
 
-fetch("http://localhost:5000/api/book/uncompleted")
+fetch("https://todo-lists-2ckh.onrender.com/api/book/uncompleted")
   .then((res) => res.json())
   .then((data) => {
     let data1;
@@ -136,7 +134,7 @@ function test(id) {
   console.log(id);
 }
 
-fetch("http://localhost:5000/api/book/completed")
+fetch("https://todo-lists-2ckh.onrender.com/api/book/completed")
   .then((res) => res.json())
   .then((data) => {
     let data1;
@@ -162,15 +160,17 @@ fetch("http://localhost:5000/api/book/completed")
   });
 
 const updated = async (id) => {
-  console.log("worked");
   try {
-    await fetch(`http://localhost:5000/api/books/completed/${id}`, {
-      method: "PUT",
-      body: JSON.stringify(todoList),
-      headers: {
-        "Content-type": "application/json",
-      },
-    });
+    await fetch(
+      `https://todo-lists-2ckh.onrender.com/api/books/completed/${id}`,
+      {
+        method: "PUT",
+        body: JSON.stringify(todoList),
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+    );
     location.reload();
   } catch (error) {
     console.log(error);
@@ -179,13 +179,16 @@ const updated = async (id) => {
 
 const returned = async (id) => {
   try {
-    await fetch(`http://localhost:5000/api/books/uncompleted/${id}`, {
-      method: "PUT",
-      body: JSON.stringify(todoList),
-      headers: {
-        "Content-type": "application/json",
-      },
-    });
+    await fetch(
+      `https://todo-lists-2ckh.onrender.com/api/books/uncompleted/${id}`,
+      {
+        method: "PUT",
+        body: JSON.stringify(todoList),
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+    );
     location.reload();
   } catch (error) {
     console.log(error);
@@ -194,7 +197,7 @@ const returned = async (id) => {
 
 const deleted = async (id) => {
   try {
-    await fetch(`http://localhost:5000/api/books/${id}`, {
+    await fetch(`https://todo-lists-2ckh.onrender.com/api/books/${id}`, {
       method: "delete",
       body: JSON.stringify(todoList),
       headers: {
@@ -208,15 +211,17 @@ const deleted = async (id) => {
 };
 
 const deleteAllTask = async () => {
-  console.log("worked");
   try {
-    await fetch(`http://localhost:5000/api/books/delete/completed`, {
-      method: "delete",
-      body: JSON.stringify(todoList),
-      headers: {
-        "Content-type": "application/json",
-      },
-    });
+    await fetch(
+      `https://todo-lists-2ckh.onrender.com/api/books/delete/completed`,
+      {
+        method: "delete",
+        body: JSON.stringify(todoList),
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+    );
     location.reload();
   } catch (error) {
     console.log(error);
